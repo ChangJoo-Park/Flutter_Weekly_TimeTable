@@ -33,9 +33,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: WeeklyTimeTable(
-        cellColor: Color.fromRGBO(0, 184, 255, 1.0),
-        cellSelectedColor: Color.fromRGBO(189, 0, 255, 1.0),
-        boarderColor: Color.fromRGBO(0,30,255, 1.0),
+//        cellColor: Color.fromRGBO(0, 184, 255, 1.0),
+//        cellSelectedColor: Color.fromRGBO(189, 0, 255, 1.0),
+//        boarderColor: Color.fromRGBO(0,30,255, 1.0),
+        onValueChanged: (Map<int, List<int>>selected) {
+          print(selected);
+        },
       ),
     );
   }

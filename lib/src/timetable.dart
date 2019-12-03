@@ -5,7 +5,7 @@ import 'package:weekly_timetable/src/indicator.dart';
 import 'package:weekly_timetable/src/weekly_times.dart';
 
 class WeeklyTimeTable extends StatefulWidget {
-  final ValueChanged onValueChanged;
+  final ValueChanged<Map<int, List<int>>> onValueChanged;
   final Color cellColor;
   final Color cellSelectedColor;
   final Color boarderColor;
@@ -94,6 +94,6 @@ class _WeeklyTimeTableState extends State<WeeklyTimeTable> {
         selected[day].remove(timeRange);
       }
     });
-//    widget.onValueChanged(null);
+    widget.onValueChanged(selected);
   }
 }
