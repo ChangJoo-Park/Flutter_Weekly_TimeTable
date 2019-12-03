@@ -76,7 +76,7 @@ WeeklyTimeTable has some options for Cell colors and initial schedule
 | bool                | draggable         | TBD                                                  |
 | Map<int, List<int>> | initialSchedule   | TBD                                                  |
 
-## Furthermore
+## TBD
 
 - [ ] Internationalization
 - [ ] Horizontal Drag for select
