@@ -42,8 +42,7 @@ class _CellState extends State<Cell> {
             widget.onCellTapped(
                 widget.day, widget.timeRange, widget.isSelected);
           },
-          child: Container(
-            height: 58.0,
+          child: AnimatedContainer(
             decoration: BoxDecoration(
               color: currentColor,
               border: Border(
@@ -52,6 +51,9 @@ class _CellState extends State<Cell> {
                 right: BorderSide(width: 0.0, color: widget.boarderColor),
               ),
             ),
+            height: 58.0,
+            duration: Duration(milliseconds: 500),
+            curve: Curves.fastOutSlowIn,
           ),
         ),
       ),
