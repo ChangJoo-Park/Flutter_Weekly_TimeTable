@@ -85,4 +85,6 @@ WeeklyTimeTable has some options for Cell colors and initial schedule
 - [ ] Support Time Cell disable
 - [ ] Support Day disable
 
-## Contributes
+## Contributors
+
+- [ChangJoo Park](https://github.com/changjoo-park)
