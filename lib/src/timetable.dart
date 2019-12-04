@@ -11,6 +11,7 @@ class WeeklyTimeTable extends StatefulWidget {
   final Color boarderColor;
   final Map<int, List<int>> initialSchedule;
   final bool draggable;
+  final String locale;
 
   WeeklyTimeTable({
     this.cellColor = Colors.white,
@@ -26,6 +27,7 @@ class WeeklyTimeTable extends StatefulWidget {
       6: [],
     },
     this.draggable = false,
+    this.locale = "en",
     this.onValueChanged,
   });
 
@@ -34,6 +36,7 @@ class WeeklyTimeTable extends StatefulWidget {
 }
 
 class _WeeklyTimeTableState extends State<WeeklyTimeTable> {
+  String locale = 'en';
   Map<int, List<int>> selected = {
     0: [],
     1: [],
@@ -46,6 +49,12 @@ class _WeeklyTimeTableState extends State<WeeklyTimeTable> {
 
   @override
   void initState() {
+    if (WeeklyTimes.localContains(widget.locale)) {
+      setState(() {
+        locale = widget.locale;
+      });
+    }
+
     super.initState();
   }
 
@@ -54,18 +63,18 @@ class _WeeklyTimeTableState extends State<WeeklyTimeTable> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Header(),
+        Header(WeeklyTimes.dates[this.locale]),
         Expanded(
           child: ListView.builder(
-            itemCount: WeeklyTimes.times.length,
+            itemCount: WeeklyTimes.times[this.locale].length,
             shrinkWrap: true,
             scrollDirection: Axis.vertical,
             itemBuilder: (BuildContext context, int index) {
               List<Widget> children = [];
-              children.add(Indicator(WeeklyTimes.times[index]));
+              children.add(Indicator(WeeklyTimes.times[this.locale][index]));
               children.addAll(
                 List.generate(
-                  WeeklyTimes.dates.length - 1,
+                  WeeklyTimes.dates[this.locale].length - 1,
                       (i) =>
                       Cell(
                         day: i,

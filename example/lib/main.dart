@@ -36,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //        cellColor: Color.fromRGBO(0, 184, 255, 1.0),
 //        cellSelectedColor: Color.fromRGBO(189, 0, 255, 1.0),
 //        boarderColor: Color.fromRGBO(0,30,255, 1.0),
+        locale: 'ko',
         onValueChanged: (Map<int, List<int>>selected) {
           print(selected);
         },
