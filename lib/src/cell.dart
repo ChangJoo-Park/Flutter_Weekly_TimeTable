@@ -42,11 +42,6 @@ class _CellState extends State<Cell> {
             widget.onCellTapped(
                 widget.day, widget.timeRange, widget.isSelected);
           },
-          // TODO
-          onHorizontalDragStart: (DragStartDetails) {},
-          onHorizontalDragDown: (DragEndDetails) {},
-          onVerticalDragStart: (DragStartDetails) {},
-          onVerticalDragEnd: (DragEndDetails) {},
           child: Container(
             height: 58.0,
             decoration: BoxDecoration(
