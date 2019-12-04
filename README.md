@@ -73,12 +73,13 @@ WeeklyTimeTable has some options for Cell colors and initial schedule
 | Color               | cellSelectedColor | set color when cell selected (default: Colors.black) |
 | Color               | borderColor       | grid line color (default: Colors.grey)               |
 | ValueChanged<Map<int, List<int>>>        | onValueChanged    | trigger onValueChanged every user click.             |
+  | String            | locale            | optional. `en` by default, `ko`, `de`, `ja`          |
 | bool                | draggable         | TBD                                                  |
 | Map<int, List<int>> | initialSchedule   | TBD                                                  |
 
+
 ## TBD
 
-- [ ] Internationalization
 - [ ] Horizontal Drag for select
 - [ ] Vertical Drag for select
 - [ ] Support Time Cell disable
