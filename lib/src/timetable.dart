@@ -32,20 +32,14 @@ class WeeklyTimeTable extends StatefulWidget {
   });
 
   @override
-  _WeeklyTimeTableState createState() => _WeeklyTimeTableState();
+  _WeeklyTimeTableState createState() => _WeeklyTimeTableState(this.initialSchedule);
 }
 
 class _WeeklyTimeTableState extends State<WeeklyTimeTable> {
   String locale = 'en';
-  Map<int, List<int>> selected = {
-    0: [],
-    1: [],
-    2: [],
-    3: [],
-    4: [],
-    5: [],
-    6: [],
-  };
+  Map<int, List<int>> selected;
+
+  _WeeklyTimeTableState(this.selected);
 
   @override
   void initState() {
