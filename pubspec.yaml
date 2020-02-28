@@ -1,7 +1,6 @@
 name: weekly_timetable
 description: Timetable widget for flutter
 version: 0.2.2
-author: ChangJoo Park<pcjpcj2@gmail.com>
 homepage: https://github.com/ChangJoo-Park/Flutter_Weekly_TimeTable
 
 environment:
